@@ -1,0 +1,10 @@
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bid-calculation-fe_vuejs
+    restart: always
+    ports:
+      - '8080:8080'
+    command: http-server dist
