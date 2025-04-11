@@ -9,7 +9,7 @@ This is a short project to calculate the vehicle price according to its vehicle 
 First, clone the repository.\
 
 ```sh
-git clone 
+git clone https://github.com/nasquevedo/bid-calculation-fe_vuejs.git
 ```
 
 Once the repository was cloned, create the image and container by running docker compose.\
