@@ -1,35 +1,22 @@
-# bid-calculation-fe_vuejs
+# The bid Calculation - Frontend Vuejs
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a short project to calculate the vehicle price according to its vehicle base price and type, it consumes a REST API to get the information 
 
-## Recommended IDE Setup
+## Setting up
+- node18.19
+- npm10.9
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+First, clone the repository.\
 
 ```sh
-npm install
+git clone 
 ```
 
-### Compile and Hot-Reload for Development
+Once the repository was cloned, create the image and container by running docker compose.\
 
 ```sh
-npm run dev
-```
+docker-compose up -d --build
+````
 
-### Compile and Minify for Production
+Finally, visit [http://localhost:8080](HTTP://localhost:8080)
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
