@@ -6,6 +6,8 @@ import Loading from '@/components/common/Loading/Loading.vue'
 import Error from '@/components/common/Error/Error.vue'
 import Price from '@/components/Price/Price.vue'
 
+const{ VITE_APP_API_URL, VITE_APP_API_VEHICLE_TYPE_ENDPOINT, VITE_APP_PRICE_ENDPOINT } = import.meta.env 
+
 const vehicleBasePrice = ref(0)
 const selected = ref('')
 const loading = ref(true)
@@ -18,17 +20,12 @@ const invalidVehicleType = ref(false)
 
 
 watchEffect(async () => {
-    const response = await fetch('http://localhost/api/v1/vehicle/types')
+    const response = await fetch(`${VITE_APP_API_URL}${VITE_APP_API_VEHICLE_TYPE_ENDPOINT}`)
     const result = await response.json()
     options.value = result.data
 
     loading.value = false
 })
-
-const cleanSelect = () => {
-    selected.value = ""
-    cleanErrors()
-} 
 
 const priceStore = usePriceStore()
 const getPrices = async () => {
@@ -44,7 +41,7 @@ const getPrices = async () => {
         return
     }
 
-    const response = await fetch(`http://localhost/api/v1/price?price=${vehicleBasePrice.value}&type=${selected.value}`)
+    const response = await fetch(`${VITE_APP_API_URL}${VITE_APP_PRICE_ENDPOINT}?price=${vehicleBasePrice.value}&type=${selected.value}`)
     const result = await response.json()
 
     priceStore.addPrice(result.data)

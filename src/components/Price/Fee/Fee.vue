@@ -21,5 +21,6 @@ defineProps({
 <style scoped>
 .subitem {
     font-size: 14px;
+    padding: 0 10px 0;
 }
 </style>

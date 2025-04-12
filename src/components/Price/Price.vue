@@ -1,6 +1,6 @@
 <script setup>
 import { usePriceStore } from '@/stores/price'
-import Fee from './Fee/Fee..vue';
+import Fee from './Fee/Fee.vue';
 
 const priceStore = usePriceStore()
 const { fees } = priceStore.price
