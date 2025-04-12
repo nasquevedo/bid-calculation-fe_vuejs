@@ -14,6 +14,8 @@ git clone https://github.com/nasquevedo/bid-calculation-fe_vuejs.git
 
 Once the repository was cloned, create the image and container by running docker compose.\
 
+Create the .env file based on .env.local ```cp .env.local .env```
+
 ```sh
 docker-compose up -d --build
 ````
