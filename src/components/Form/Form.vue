@@ -65,7 +65,7 @@ const cleanErrors = () => {
                 class="input" 
                 type="number"
                 placeholder="398.00"
-                @keyup="cleanSelect()"
+                @change="getPrices()"
             />
             <div v-if="invalidVehicleBasePrice">
                 <Error message="Vehicle Base Price is required or higher than 0"></Error>
