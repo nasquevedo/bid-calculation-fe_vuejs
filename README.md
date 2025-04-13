@@ -22,3 +22,9 @@ docker-compose up -d --build
 
 Finally, visit [http://localhost:8080](HTTP://localhost:8080)
 
+### Testing
+
+To execute the tests, run the next command
+```sh
+npm run test:unit
+```
