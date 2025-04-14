@@ -30,7 +30,7 @@ move to the project folder ```cd bid-calculation-fe_vuejs```
 
 Create the .env file based on .env.local ```cp .env.local .env```
 
-Intall dependencies
+Install dependencies
 ```sh
 npm install
 ```
@@ -41,6 +41,14 @@ npm run dev
 ```
 
 Finally, visit [http://localhost:5173](http://localhost:5173)
+
+or using docker-compose
+
+```sh
+docker-compose up -d --build
+```
+
+And visiting [http://localhost:8080](http://localhost:8080)
 
 ### Testing
 
