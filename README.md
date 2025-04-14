@@ -1,28 +1,46 @@
 # The bid Calculation - Frontend Vuejs
 
-This is a short project to calculate the vehicle price according to its vehicle base price and type, it consumes a REST API to get the information 
+This is a short project to calculate the vehicle price according to its vehicle base price and type, It consumes a REST API to get the information 
+
+The API has two routes:<br>
+```vehicle/types``` <br>
+This route obtains the types on the database; by default, it gets two:
+- Common
+- Luxury
+
+```/price```<br>
+This route gets the total price, including the vehicle type, base price, each fee, and total fees. it recevies to parameters by [GET]
+- price: vehicle base price
+- type: vehicle type
+
+### note
+The project must be running on Windows 
 
 ## Setting up
 - node18.19
 - npm10.9
 
-First, clone the repository.\
+First, clone the repository.
 
 ```sh
 git clone https://github.com/nasquevedo/bid-calculation-fe_vuejs.git
 ```
 
-Once the repository was cloned, create the image and container by running docker compose.
-
 move to the project folder ```cd bid-calculation-fe_vuejs```
 
 Create the .env file based on .env.local ```cp .env.local .env```
 
+Intall dependencies
 ```sh
-docker-compose up -d --build
-````
+npm install
+```
 
-Finally, visit [http://localhost:8080](HTTP://localhost:8080)
+Then, run the app 
+```sh
+npm run dev
+```
+
+Finally, visit [http://localhost:8080](http://localhost:5173)
 
 ### Testing
 
